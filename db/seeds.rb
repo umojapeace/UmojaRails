@@ -8,5 +8,5 @@
 
 
 10.times do
-  Event.create(date: Faker::Date.forward(23), title: Faker::App.name, content: "This is an event")
+  Event.create(date: Faker::Date.forward(23), name: Faker::Name.name, content: "This is an event")
 end
