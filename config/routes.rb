@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+  get "/events", to: "home#events", as: :events
   get "/pics", to: "home#instagram", as: :instagram
   get "/about", to: "home#about", as: :about
   root "home#index"
