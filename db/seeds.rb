@@ -10,7 +10,8 @@
 10.times do
   Event.create(
   date:     Faker::Date.forward(23),
-  title:    Faker::Name.name,
+  title:    Faker::App.name,
+  author:   Faker::App.author,
   location: Faker::Address.state
   )
 end
