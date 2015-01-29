@@ -37,11 +37,13 @@ If you wanted the first friend on the list you would say:
    How would you get the cities for all of your friends?
 -->
 <% @events.each do |event| %>
-  <p><%= event.title  %><br>
-     <%= event.date  %><br>
-     <%= event.author  %><br>
-     <%= event.location  %></p>
+     <h2><%= event.title  %></h2>
+     <p><%= event.author  %></p>
+     <p><%= event.location  %></p>
+     <p><%= event.date.strftime('%m/%d/%Y') %></p>
 <% end %>
+
+
 
 
 
