@@ -1,8 +1,23 @@
-<h1> Events </h1>
+<div class="event_page">
 
-<!--
-Imagine you are looking at your friend list in facebook.
-This is your friend list
+  <h1> Events </h1>
+
+  <% @events.each do |event| %>
+     <h2><%= event.title  %></h2>
+     <p><%= event.author  %></p>
+     <p><%= event.location  %></p>
+     <p><%= event.date.strftime('%m/%d/%Y') %></p>
+  <% end %>
+
+</div>
+
+
+
+
+
+  <!--
+  Imagine you are looking at your friend list in facebook.
+  This is your friend list
 
   Friends = [ Name: Kamilah
     City: Cleveland, OH
@@ -18,7 +33,7 @@ This is your friend list
   ]
 
 
-If you wanted the first friend on the list you would say:
+  If you wanted the first friend on the list you would say:
 
   Friends.first
     => [ Name: Kamilah
@@ -35,13 +50,7 @@ If you wanted the first friend on the list you would say:
    [Kamilah, Joaquin, Omar, Janice]
 
    How would you get the cities for all of your friends?
--->
-<% @events.each do |event| %>
-     <h2><%= event.title  %></h2>
-     <p><%= event.author  %></p>
-     <p><%= event.location  %></p>
-     <p><%= event.date.strftime('%m/%d/%Y') %></p>
-<% end %>
+  -->
 
 
 
@@ -72,4 +81,6 @@ If you wanted the first friend on the list you would say:
 
 
 
-<!--  -->
+
+
+  <!--  -->
